@@ -14,7 +14,7 @@ async function bootstrap() {
 
   app.setGlobalPrefix('/api');
 
-  if (Config.HttpRequestLogs) app.use(morgan('dev'));
+  app.use(morgan('dev'));
 
   app.useGlobalPipes(
     new ValidationPipe({
